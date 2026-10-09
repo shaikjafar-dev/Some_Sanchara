@@ -313,22 +313,21 @@ document.querySelectorAll('[data-copy]').forEach(function(b){
   }
   function sched(){if(!raf)raf=requestAnimationFrame(function(){raf=0;draw()})}
   readCols();seed();size();
-  function revealLogo(){window.setTimeout(function(){hero.querySelector('.badge').classList.add('logo-reveal')},450)}
   function startRays(){
     if(raysStarted)return;raysStarted=true;
     var t0=null;
     function animateRays(ts){
-      if(t0===null)t0=ts;rayProgress=Math.min(1,(ts-t0)/3000);draw();
-      if(rayProgress<1)requestAnimationFrame(animateRays);else revealLogo();
+      if(t0===null)t0=ts;rayProgress=Math.min(1,(ts-t0)/700);draw();
+      if(rayProgress<1)requestAnimationFrame(animateRays);
     }
     requestAnimationFrame(animateRays);
   }
   if(reduce){rise=1;rayProgress=1;hero.classList.add('daylight');hero.querySelector('.badge').classList.add('logo-reveal');draw()}else{
     var t0=null;
     requestAnimationFrame(function intro(ts){
-      if(t0===null)t0=ts;rise=Math.min(1,(ts-t0)/12000);
+      if(t0===null)t0=ts;rise=Math.min(1,(ts-t0)/2800);
       if(rise>.65)hero.classList.add('daylight');
-      if(rise===1)startRays();
+      if(rise===1&&!raysStarted){hero.querySelector('.badge').classList.add('logo-reveal');startRays()}
       draw();
       if(rise<1)requestAnimationFrame(intro);
     });
