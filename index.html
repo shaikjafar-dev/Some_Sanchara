@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0C1718">
+  <meta name="description" content="Plan memorable group trips across Karnataka with Some Sanchara.">
+  <title>Some Sanchara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Noto+Serif+Kannada:wght@600;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap in">
+    <a class="brand" href="#top" aria-label="Some Sanchara, back to top">
+      <img src="assets/logo.png" alt="" width="38" height="38">
+      <span class="nm">Some <span class="kn" lang="kn">Sanchara</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="lnk" href="#trips">Trips</a>
+      <a class="lnk" href="#book">Plan a group</a>
+      <a class="lnk" href="#follow">Follow</a>
+      <a class="btn pri" href="#contact">Book a seat</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Trips · Treks · Adventures · Bengaluru</p>
+      <h1>Karnataka roots,<br><em>endless routes.</em></h1>
+      <p class="lede">Come, experience Hampi with us. Or go beyond the beaches in Gokarna. Two-day trips at a fixed price per person, leaving from Bengaluru, Mysuru, Tumakuru, Chitradurga and Davanagere.</p>
+      <div class="cta-row">
+        <a class="btn pri" href="#trips">See the trips</a>
+        <a class="btn sec" href="https://www.instagram.com/some_sanchara/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+          @some_sanchara
+        </a>
+      </div>
+      <!-- <p class="facts"><span><b>2 days · 1 night</b></span><span>₹3,499 to ₹4,599 per person</span><span>Karnataka to the world</span></p> -->
+    </div>
+    <div class="badge">
+      <svg class="ring" viewBox="0 0 300 300" aria-hidden="true">
+        <defs><path id="circ" d="M150,150 m-126,0 a126,126 0 1,1 252,0 a126,126 0 1,1 -252,0"/></defs>
+        <text><textPath href="#circ" textLength="790" lengthAdjust="spacing">Karnataka roots • Endless routes • Trips • Treks • Adventures •</textPath></text>
+      </svg>
+      <span class="logo-art" role="img" aria-label="Some Sanchara logo: Karnataka landscape, temple, traveler and setting sun">
+        <img class="logo-piece logo-mountains" src="assets/logo.png" alt="" aria-hidden="true" width="150" height="150">
+        <img class="logo-piece logo-traveler" src="assets/logo.png" alt="" aria-hidden="true" width="150" height="150">
+        <img class="logo-piece logo-wordmark" src="assets/logo.png" alt="" aria-hidden="true" width="150" height="150">
+      </span>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-label="Pickup cities">
+  <div class="marq-track" id="marq"></div>
+</div>
+
+<section class="band" id="trips">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Upcoming trips</p>
+      <h2>Pick your route</h2>
+      <p class="sub">Choose a trip to see the day-by-day plan, upcoming departures and what it costs for your group.</p>
+    </div>
+
+    <div class="seg rv" role="tablist" aria-label="Choose a trip">
+      <button type="button" role="tab" data-pick="hampi" aria-selected="true">Hampi <span class="kn" lang="kn">ಹಂಪಿ</span></button>
+      <button type="button" role="tab" data-pick="gokarna" aria-selected="false">Gokarna <span class="kn" lang="kn">ಗೋಕರ್ಣ</span></button>
+    </div>
+
+    <div class="planner" data-trip="hampi" data-scope>
+      <article class="ticket rv" id="ticket" aria-live="polite"></article>
+      <div class="rv">
+        <div class="days" id="days" role="tablist" aria-label="Choose a day"></div>
+        <div id="tl-wrap"></div>
+        <p class="note" id="note">This is an indicative plan. Exact timings and pickup points are confirmed by the Some Sanchara team when you book.</p>
+        <div class="dep">
+          <h4 id="dep-h">Upcoming departures</h4>
+          <div class="chips" id="chips" role="group" aria-labelledby="dep-h"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="book" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Group planner</p>
+      <h2>Plan your seats</h2>
+      <p class="sub">Pick a date and pickup city, set the group size, then copy a ready-to-send booking message for Instagram.</p>
+    </div>
+    <div class="book-grid" data-trip="hampi" data-scope>
+      <div class="card rv">
+        <h3>Booking details</h3>
+        <div class="form">
+          <label class="fld"><span>Trip</span>
+            <select id="b-trip"><option value="hampi">Hampi · ₹4,599</option><option value="gokarna">Gokarna · ₹3,499</option></select>
+          </label>
+          <label class="fld"><span>Departure</span><select id="b-date"></select></label>
+          <label class="fld"><span>Pickup city</span><select id="b-city"></select></label>
+          <div class="fld"><span id="n-lbl">Travellers</span>
+            <div class="stepper" role="group" aria-labelledby="n-lbl">
+              <button type="button" id="minus" aria-label="One fewer traveller">−</button>
+              <output id="b-n" aria-live="polite">2</output>
+              <button type="button" id="plus" aria-label="One more traveller">+</button>
+            </div>
+          </div>
+          <div class="total" aria-live="polite"><span id="b-calc"></span><b id="b-total"></b></div>
+          <textarea class="msg" id="b-msg" readonly aria-label="Booking message"></textarea>
+          <div class="actions">
+            <button class="btn trip" id="b-copy" type="button">Copy message</button>
+            <a class="btn sec" href="https://www.instagram.com/some_sanchara/" target="_blank" rel="noopener">Open Instagram</a>
+          </div>
+          <p class="fine" style="grid-column:1/-1">Paste this into a DM to @some_sanchara or read it out when you call. Seats are confirmed by the team, so availability and payment details come from them.</p>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3>Pack list</h3>
+        <p class="pack-count" id="pack-count"></p>
+        <div class="bar" aria-hidden="true"><i id="pack-bar"></i></div>
+        <ul class="packs" id="packs"></ul>
+        <p class="fine" style="margin-top:1rem">Suggestions only. Your ticks are saved in this browser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="follow band" id="follow">
+  <div class="ghost" aria-hidden="true" lang="kn">ಸಂಚಾರ</div>
+  <div class="wrap">
+    <div class="follow-grid">
+      <div class="rv">
+        <p class="eyebrow">Follow the route</p>
+        <h2 style="font:400 clamp(2rem,5vw,3.3rem)/1.08 var(--f-display);margin-block:.8rem .6rem">New trips land on Instagram first</h2>
+        <p class="handle">@some_sanchara</p>
+        <p class="sub" style="max-width:30rem;color:var(--muted);margin-bottom:1.4rem">Scan the code with your phone camera, or tap the button. DM us the trip name, or comment HAMPI to book Hampi.</p>
+        <a class="btn pri" href="https://www.instagram.com/some_sanchara/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </div>
+      <div class="qr rv"><img src="assets/qr.png" alt="Instagram QR code for some_sanchara" width="202" height="244"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Book a seat</p>
+      <h2>Call the team</h2>
+      <p class="sub">Three booking lines. Tap a number to call from your phone, or copy it.</p>
+    </div>
+    <div class="calls rv">
+      <div class="call"><span class="lbl">Booking line 1</span><a class="num" href="tel:+916362894336">63628 94336</a><button class="copy" type="button" data-copy="6362894336">Copy number</button></div>
+      <div class="call"><span class="lbl">Booking line 2</span><a class="num" href="tel:+916925463814">69254 63814</a><button class="copy" type="button" data-copy="6925463814">Copy number</button></div>
+      <div class="call"><span class="lbl">Booking line 3</span><a class="num" href="tel:+916305098912">63050 98912</a><button class="copy" type="button" data-copy="6305098912">Copy number</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand"><img src="assets/logo.png" alt="" width="44" height="44"><span>Some Sanchara <span class="kn" lang="kn">ಸಂಚಾರ</span></span></div>
+    <p>Karnataka Roots • Endless Routes · Bengaluru, Karnataka</p>
+  </div>
+</footer>
+</body>
+</html>
