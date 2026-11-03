@@ -1,0 +1,1 @@
+var DEPS={hampi:departures('hampi'),gokarna:departures('gokarna'),kudremukha:departures('kudremukha'),kumaraparvatha:departures('kumaraparvatha'),netrani:departures('netrani'),netravati:departures('netravati')};

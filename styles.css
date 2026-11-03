@@ -293,9 +293,11 @@ footer{border-top:1px solid var(--line);padding-block:2rem}
 [data-trip-cat="historic"]{--tc:#B4552B;--tc-ink:#F2EAD7}
 
 /* Trips Analysis - Reference Screenshot Layout */
-.trip-sec-title{font:700 2.8rem/1.05 var(--f-display);color:var(--fg);margin-bottom:.35rem;letter-spacing:.003em}
-.trip-sec-desc{color:var(--muted);font-size:1.1rem;max-width:52rem;margin-bottom:2rem;line-height:1.6}
-.pill-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.trip-section{margin-bottom:4rem}
+.trip-section:last-child{margin-bottom:0}
+.trip-sec-title{font:700 2.8rem/1.05 var(--f-display);color:var(--fg);margin-bottom:.6rem;letter-spacing:.003em}
+.trip-sec-desc{color:var(--muted);font-size:1.1rem;max-width:52rem;margin-bottom:2.5rem;line-height:1.6}
+.pill-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:3rem}
 .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--fg);font:500 .92rem/1 var(--f-body);cursor:pointer;transition:all .3s cubic-bezier(.3,.7,.2,1);position:relative;overflow:hidden}
 .pill::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,.03),transparent);opacity:0;transition:opacity .3s}
 .pill:hover::before{opacity:1}
@@ -355,9 +357,40 @@ footer{border-top:1px solid var(--line);padding-block:2rem}
 /* Hide legacy planner UI pieces that are no longer used in Trips Analysis */
 #ticket,#days,#tl-wrap,#note,#dep-h,#chips,.ticket{display:none!important}
 
+@media (max-width:900px){
+  .trip-two-col{grid-template-columns:1fr;gap:2rem}
+  .trip-section{margin-bottom:3rem}
+  .trip-card-left{margin-bottom:0}
+  .trip-actions{grid-template-columns:1fr}
+}
+
 @media (max-width:768px){
-  .trip-sec-title{font-size:2rem}
-  .trip-price{font-size:1.6rem}
+  .trip-section{margin-bottom:2.5rem}
+  .trip-sec-title{font-size:1.8rem}
+  .trip-sec-desc{font-size:1rem;margin-bottom:1.5rem}
+  .trip-price{font-size:1.5rem}
   .trip-card-left,.trip-itin{padding:1.25rem}
   .trip-actions{grid-template-columns:1fr}
+  .trip-two-col{grid-template-columns:1fr;gap:1.5rem}
+  .trip-card-left{margin-bottom:0}
+  .pill-row{gap:.5rem;margin-bottom:2rem}
+  .pill{padding:.45rem 1rem;font-size:.85rem}
+  .trip-dur{font-size:.7rem;padding:.15rem .5rem}
+  .trip-card-left h3{font-size:1.35rem}
+  .trip-meta{font-size:.85rem;gap:.3rem .7rem}
+  .trip-book{margin-top:.8rem;padding-top:.8rem}
+  .trip-book .lbl{font-size:.7rem}
+  .trip-actions{margin-top:1rem}
+  .trip-actions .btn{padding:.75rem .9rem;font-size:.9rem}
+  .trip-itin{padding:1.25rem}
+  .trip-itin h4.trip-itin-title{font-size:1.2rem;margin-bottom:.8rem}
+  .daytabs{gap:.4rem;margin-bottom:1rem}
+  .daytab{padding:.45rem .95rem;font-size:.82rem}
+  .timeline{padding-left:1.4rem}
+  .timeline li{margin-bottom:1.25rem}
+  .t-marker{width:12px;height:12px}
+  .t-body{padding-left:1.2rem}
+  .t-time{font-size:.7rem}
+  .t-body h4{font-size:1rem;margin-bottom:.25rem}
+  .t-body p{font-size:.88rem}
 }
