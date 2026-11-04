@@ -1,0 +1,54 @@
+/* Animated SVG scene primitives shared by the homepage cards and the itinerary pages */
+/* ---------- shared SVG scene animation ---------- */
+.scene-svg *,.tile-svg *{transform-box:fill-box}
+.cloud{animation:cdrift var(--dur,100s) ease-in-out var(--del,0s) infinite alternate}
+@keyframes cdrift{to{transform:translateX(220px)}}
+.bird{animation:birdfly var(--dur,34s) linear var(--del,0s) infinite}
+@keyframes birdfly{from{transform:translateX(-260px)}to{transform:translateX(1900px)}}
+.flap{transform-origin:50% 100%;animation:flap .9s ease-in-out infinite}
+@keyframes flap{0%,100%{transform:scaleY(1)}50%{transform:scaleY(-.55)}}
+.mist{animation:mdrift var(--dur,50s) ease-in-out var(--del,0s) infinite alternate}
+@keyframes mdrift{to{transform:translateX(var(--dx,160px))}}
+.spark{fill:#ffe48f;opacity:0;animation:sparkfloat var(--dur,10s) ease-in-out var(--del,0s) infinite}
+@keyframes sparkfloat{0%{opacity:0;transform:translate(0,0)}25%{opacity:.95}70%{opacity:.7}100%{opacity:0;transform:translate(var(--dx,20px),-110px)}}
+.bub{fill:rgba(255,255,255,.12);stroke:rgba(255,255,255,.65);stroke-width:1.4;opacity:0;animation:bubrise var(--dur,10s) ease-in var(--del,0s) infinite}
+@keyframes bubrise{0%{opacity:0;transform:translate(0,0)}12%{opacity:.9}100%{opacity:0;transform:translate(var(--dx,0),calc(var(--rise,500px)*-1))}}
+.swimR{animation:swimR var(--dur,40s) linear var(--del,0s) infinite}
+.swimL{animation:swimL var(--dur,40s) linear var(--del,0s) infinite}
+@keyframes swimR{from{transform:translateX(-220px)}to{transform:translateX(calc(var(--w,1600px) + 220px))}}
+@keyframes swimL{from{transform:translateX(calc(var(--w,1600px) + 220px))}to{transform:translateX(-220px)}}
+.bobber{animation:bob var(--bd,6s) ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(calc(var(--bob,8px)*-1))}to{transform:translateY(var(--bob,8px))}}
+.weed path{transform-box:view-box;transform-origin:0 0;animation:sway var(--dur,4s) ease-in-out var(--del,0s) infinite alternate}
+@keyframes sway{from{transform:rotate(calc(var(--sw,4deg)*-1))}to{transform:rotate(var(--sw,4deg))}}
+.coral{transform-origin:50% 100%;animation:coralsway 6s ease-in-out infinite alternate}
+.coral:nth-of-type(odd){animation-duration:7.5s;animation-direction:alternate-reverse}
+@keyframes coralsway{from{transform:rotate(-1.3deg)}to{transform:rotate(1.3deg)}}
+.ray{fill:#fff;opacity:var(--o,.12);animation:raysway var(--dur,10s) ease-in-out var(--del,0s) infinite alternate}
+@keyframes raysway{from{transform:translateX(-50px);opacity:calc(var(--o,.12)*.35)}to{transform:translateX(50px);opacity:var(--o,.12)}}
+.wave{animation:wv 9s linear infinite}
+.wave-b{animation-duration:14s;animation-direction:reverse}
+@keyframes wv{to{transform:translateX(var(--len,180px))}}
+.boat{transform-origin:50% 100%;animation:boatbob 4.2s ease-in-out infinite alternate}
+@keyframes boatbob{from{transform:rotate(-2.2deg) translateY(1px)}to{transform:rotate(2.2deg) translateY(5px)}}
+.flag{transform-origin:0 50%;animation:flagwave 1.6s ease-in-out infinite alternate}
+@keyframes flagwave{from{transform:scaleX(.8) skewY(-6deg)}to{transform:scaleX(1.05) skewY(6deg)}}
+.trail{animation:trailmarch 7s linear infinite}
+@keyframes trailmarch{to{stroke-dashoffset:-110}}
+.sun-rays{transform-box:view-box;animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.glow{transform-origin:50% 50%;animation:glowpulse 6s ease-in-out infinite alternate}
+.sun{transform-origin:50% 50%;animation:glowpulse 5s ease-in-out infinite alternate}
+@keyframes glowpulse{from{transform:scale(.96);opacity:.85}to{transform:scale(1.07);opacity:1}}
+.flame{transform-box:view-box;animation:flicker .45s ease-in-out infinite alternate}
+@keyframes flicker{from{transform:scale(.94,1.04)}to{transform:scale(1.06,.94)}}
+.fire-glow{animation:glowpulse 1.4s ease-in-out infinite alternate}
+.trek-walk{animation:walkbob 1s ease-in-out var(--del,0s) infinite alternate}
+@keyframes walkbob{from{transform:translateY(0)}to{transform:translateY(-2.5px)}}
+.star{animation:twinkle var(--dur,3s) ease-in-out var(--del,0s) infinite alternate}
+@keyframes twinkle{from{opacity:.25}to{opacity:1}}
+.palm .fronds{transform-box:view-box;animation:sway 5s ease-in-out infinite alternate;--sw:2.5deg}
+@media(prefers-reduced-motion:reduce){.scene-svg *,.tile-svg *{animation:none!important}}
+.fall{stroke-dasharray:16 12;animation:fallflow .9s linear infinite}
+@keyframes fallflow{to{stroke-dashoffset:-28}}
+.fall-mist{transform-origin:50% 50%;animation:glowpulse 3s ease-in-out infinite alternate}

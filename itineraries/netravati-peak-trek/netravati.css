@@ -1,0 +1,22 @@
+/* Netravati Peak · mist, emerald grassland and lime light */
+.netravati-page{
+  --f-title:'Fraunces',Georgia,serif;--title-font:700 1em/.92 var(--f-title);--title-size:clamp(3.6rem,13vw,9.4rem);--w2-size:1em;
+  --page:#eef6ee;--ink:#10302a;--muted:#4c665e;--card:#fbfffb;--line:rgba(16,48,42,.13);--kick:#1f8a55;
+  --acc:#2fbf71;--acc2:#b6e86a;--acc-ink:#04210f;--deep:#0e3b30;--soft:#dcf1e1;
+  background-image:radial-gradient(60% 40% at 90% 0,rgba(182,232,106,.25),transparent 70%),radial-gradient(50% 40% at 0 30%,rgba(111,183,214,.18),transparent 70%)}
+.netravati-page .d-top.solid{--topbg:rgba(238,246,238,.9)}
+.netravati-page .h-title{letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+.netravati-page .h-title .w2{font-style:italic;font-weight:500;color:var(--acc2)}
+.netravati-page .stat,.netravati-page .icard,.netravati-page .tl-card,.netravati-page .fp,.netravati-page .safe{border-radius:30px}
+.netravati-page .stat .ic,.netravati-page .fp b{color:var(--deep)}
+.netravati-page .icard .badge{border-radius:50%}
+.t-ticker{background:var(--deep);color:#fff;overflow:hidden}
+.t-ticker .track{display:flex;width:max-content;animation:marq 46s linear infinite}
+.t-ticker span{display:inline-flex;align-items:center;gap:1.5rem;padding:1.05rem 0 1.05rem 1.5rem;font:500 1.25rem/1 var(--f-title);font-style:italic;white-space:nowrap}
+.t-ticker span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--acc2);flex:none}
+.netravati-page .day-ban .dn{font-family:var(--f-title);font-style:italic;font-weight:500;font-size:clamp(3.6rem,11vw,7rem);line-height:.9;color:transparent;-webkit-text-stroke:2px var(--acc)}
+.netravati-page .tile{border-radius:30px}
+.n-book{background:linear-gradient(180deg,#0e3b30,#082a21)}
+.netravati-page .d-sticky{background:#0e3b30}
+
+.d-page .d-hero{--scrim:.5}

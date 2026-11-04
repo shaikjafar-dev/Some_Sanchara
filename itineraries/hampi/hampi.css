@@ -1,0 +1,20 @@
+/* Hampi · sandstone, terracotta and sunset gold */
+.hampi-page{
+  --f-title:'Cinzel','Trajan Pro',Georgia,serif;--title-font:700 1em/.95 var(--f-title);--title-size:clamp(4rem,15vw,10.5rem);--w2-size:.3em;
+  --page:#f6ebd7;--ink:#2b1a14;--muted:#6a5246;--card:#fffaf0;--line:rgba(43,26,20,.15);--kick:#b4472a;
+  --acc:#e0692f;--acc2:#f5b84a;--acc-ink:#2a1106;--deep:#2a1219;--soft:#f0dcc0;
+  background-image:linear-gradient(rgba(246,235,215,.9),rgba(246,235,215,.9)),repeating-linear-gradient(90deg,transparent 0 58px,rgba(120,70,40,.05) 58px 60px)}
+.hampi-page .d-top.solid{--topbg:rgba(246,235,215,.9)}
+.hampi-page .h-title{letter-spacing:.04em;text-transform:uppercase}
+.hampi-page .h-title .w2{letter-spacing:.32em;color:var(--acc2);margin-top:.4rem;font-weight:500}
+.hampi-page .stat{border-radius:6px 6px 22px 22px;border-top:4px solid var(--acc)}
+.hampi-page .icard{border-radius:6px 6px 26px 26px;background:linear-gradient(180deg,#fffaf0,#f7e8cc)}
+.hampi-page .icard .badge{border-radius:50% 50% 12px 12px}
+.hampi-page .tl-card{border-left:5px solid var(--acc);border-radius:8px 20px 20px 8px}
+.hampi-page .tline::before{width:2px}
+.hampi-page .tile{border-radius:120px 120px 18px 18px/60px 60px 18px 18px}
+.hampi-page .tile:nth-child(n){border-radius:18px}
+.h-book{background:linear-gradient(180deg,#3a1822,#220e14)}
+.hampi-page .d-sticky{background:#2a1219}
+
+.d-page .d-hero{--scrim:.25}

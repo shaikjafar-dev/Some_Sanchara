@@ -1,0 +1,25 @@
+/* Gokarna · sand, surf teal and sunset coral */
+.gokarna-page{
+  --f-title:'Bricolage Grotesque',system-ui,sans-serif;--title-font:800 1em/.9 var(--f-title);--title-size:clamp(3.6rem,14vw,10rem);--w2-size:.34em;
+  --page:#fdf3dd;--ink:#0d3a47;--muted:#4f6a70;--card:#fffdf6;--line:rgba(13,58,71,.14);--kick:#d6492c;
+  --acc:#ff6b4a;--acc2:#ffb347;--acc-ink:#2a0d06;--deep:#0b4a5a;--soft:#d6f1ee}
+.gokarna-page .d-top.solid{--topbg:rgba(253,243,221,.9)}
+.gokarna-page .h-title{letter-spacing:-.03em}
+.gokarna-page .h-title .w2{font-weight:600;letter-spacing:.02em;color:#fff;margin-top:.3rem}
+.g-badge{display:inline-block;padding:.45rem .85rem;border-radius:999px;background:var(--acc);color:#2a0d06;font:800 .76rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;transform:rotate(-3deg);box-shadow:0 8px 20px -8px #ff6b4a}
+.gokarna-page .d-eyebrow:has(.g-badge)::before{display:none}
+.g-ticker{background:var(--acc);color:#2a0d06;overflow:hidden;transform:rotate(-1.2deg);margin:3rem -1rem 0;box-shadow:0 10px 30px -14px rgba(0,0,0,.5)}
+.g-ticker .track{display:flex;width:max-content;animation:marq 40s linear infinite}
+.g-ticker span{display:inline-flex;align-items:center;gap:1.3rem;padding:.95rem 0 .95rem 1.3rem;font:800 1.05rem/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.g-ticker span::after{content:"\2605";font-size:.9rem}
+.gokarna-page .stat,.gokarna-page .icard,.gokarna-page .tl-card,.gokarna-page .fp{border-radius:30px 30px 30px 8px}
+.gokarna-page .icard .badge{border-radius:50%;background:#ffe3d8;color:#d6492c}
+.gokarna-page .icard:hover .badge{background:var(--acc);color:#fff}
+.gokarna-page .tile{border:7px solid #fff;border-radius:10px;box-shadow:0 18px 30px -16px rgba(13,58,71,.6);transform:rotate(var(--r,0deg))}
+.gokarna-page .tile:nth-child(1){--r:-1.4deg}.gokarna-page .tile:nth-child(2){--r:1.2deg}.gokarna-page .tile:nth-child(3){--r:-1deg}.gokarna-page .tile:nth-child(4){--r:1.4deg}.gokarna-page .tile:nth-child(5){--r:-.8deg}
+.js .gokarna-page .tile.rv.in{transform:rotate(var(--r,0deg))}
+.gokarna-page .day-ban .dn{-webkit-text-stroke:2px var(--acc);font-family:var(--f-title)}
+.g-book{background:linear-gradient(180deg,#0b4a5a,#063542)}
+.gokarna-page .d-sticky{background:#0b4a5a}
+
+.d-page .d-hero{--scrim:.5}

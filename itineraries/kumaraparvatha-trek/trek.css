@@ -1,0 +1,54 @@
+/* Kumaraparvatha Trek · forest green, earth and sunrise orange */
+.trek-page{
+  --f-cond:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  --page:#f4eedd;--ink:#14291f;--muted:#526559;--card:#fffdf6;--line:rgba(20,41,31,.14);--kick:#a65a1b;
+  --acc:#e9893a;--acc2:#f2b84b;--acc-ink:#1d1206;--deep:#0a2a20;--soft:#e2ebd6;
+  background-image:repeating-radial-gradient(circle at 12% 8%,transparent 0 34px,rgba(20,41,31,.035) 35px 36px)}
+.trek-page .d-top.solid{--topbg:rgba(244,238,221,.88)}
+
+/* hero title */
+.t-title{margin:.8rem 0 1rem!important;font:700 clamp(3.7rem,14.5vw,10.5rem)/.84 var(--f-cond);text-transform:uppercase;letter-spacing:-.005em;text-shadow:0 6px 40px rgba(0,0,0,.35)}
+.t-title .w{display:block;white-space:nowrap}
+.t-title .ch{display:inline-block;animation:chIn 1s var(--ease) both;animation-delay:calc(var(--i)*38ms + .35s)}
+.t-title .w2{color:transparent;-webkit-text-stroke:2px var(--acc2);text-shadow:none}
+@keyframes chIn{from{opacity:0;transform:translateY(70%) rotate(7deg)}to{opacity:1;transform:none}}
+.t-badge{display:inline-flex;align-items:center;gap:.5rem;font:700 .8rem/1 var(--f-cond);letter-spacing:.2em;text-transform:uppercase;padding:.5rem .8rem;border-radius:6px;background:var(--acc);color:var(--acc-ink);transform:rotate(-2deg)}
+
+/* ticker */
+.t-ticker{background:var(--deep);color:#fff;overflow:hidden;position:relative}
+.t-ticker .track{display:flex;width:max-content;animation:marq 46s linear infinite}
+.t-ticker:hover .track{animation-play-state:paused}
+.t-ticker span{display:inline-flex;align-items:center;gap:1.5rem;padding:1.05rem 0 1.05rem 1.5rem;font:700 1.2rem/1 var(--f-cond);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.t-ticker span::after{content:"";width:0;height:0;border-inline:7px solid transparent;border-bottom:12px solid var(--acc);flex:none}
+
+/* stats sit over the ticker edge */
+.trek-page .d-stats{margin-top:-3.6rem}
+.trek-page .stat b{color:var(--deep)}
+.trek-page .stat::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:100%;background:linear-gradient(90deg,var(--acc),var(--acc2));transform:scaleX(0);transform-origin:0 50%;transition:transform .6s var(--ease)}
+.trek-page .stat:hover::after{transform:scaleX(1)}
+.trek-page .d-stats+.t-ticker{margin-top:3.2rem}
+
+/* highlights bento */
+.t-hl{background:var(--deep);color:#fff;overflow:hidden;isolation:isolate}
+.t-hl::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 60% at 10% 0,rgba(233,137,58,.22),transparent 70%),repeating-radial-gradient(circle at 85% 100%,transparent 0 30px,rgba(255,255,255,.04) 31px 32px)}
+.t-hl .d-kick{color:var(--acc2)}.t-hl .d-sub{color:rgba(255,255,255,.75)}
+.hl-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.hl{position:relative;padding:1.5rem;border-radius:24px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);overflow:hidden;transition:transform .45s var(--ease),border-color .4s,background .4s}
+.hl:hover{transform:translateY(-6px);border-color:var(--acc);background:rgba(255,255,255,.09)}
+.hl .big-ic{position:absolute;right:-10px;bottom:-14px;width:130px;height:130px;color:rgba(255,255,255,.07);transition:transform .7s var(--ease),color .4s}
+.hl:hover .big-ic{transform:rotate(-10deg) scale(1.15);color:rgba(242,184,75,.2)}
+.hl .badge{display:grid;place-items:center;width:50px;height:50px;border-radius:16px;background:var(--acc);color:var(--acc-ink);margin-bottom:1rem}
+.hl h3{font:400 1.45rem/1.15 var(--f-display);margin-bottom:.3rem!important}
+.hl p{color:rgba(255,255,255,.72);font-size:.95rem;max-width:26rem}
+.hl:nth-child(1){grid-column:span 3;grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:330px;background:linear-gradient(160deg,rgba(233,137,58,.25),rgba(255,255,255,.04) 60%)}
+.hl:nth-child(1) h3{font-size:clamp(1.9rem,3.5vw,2.7rem)}
+.hl:nth-child(2),.hl:nth-child(3){grid-column:span 3}
+.hl:nth-child(4),.hl:nth-child(5){grid-column:span 3}
+@media(max-width:760px){.hl-grid{grid-template-columns:1fr}.hl:nth-child(n){grid-column:auto;grid-row:auto;min-height:0}.hl:nth-child(1){min-height:240px}}
+
+/* booking */
+.t-book .deco{position:absolute;inset:auto 0 0 0;height:240px;z-index:-1;opacity:.55;pointer-events:none}
+.t-book .deco svg{width:100%;height:100%;display:block}
+.t-book{background:linear-gradient(180deg,#0a2a20,#071d16)}
+.t-book .d-h2{font-size:clamp(2.4rem,6vw,4.4rem)}
+.t-book .book-grid2{padding-bottom:3rem}
